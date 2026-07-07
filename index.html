@@ -651,13 +651,12 @@
                     <a href="#contact" class="btn-primary">
                         <i class="fas fa-paper-plane"></i> Hire Me
                     </a>
-                    <!-- ADD THIS NEW BUTTON -->
-    <a href="https://www.linkedin.com/in/vaira-muthu-550806361" target="_blank" class="btn-secondary">
-        <i class="fab fa-linkedin-in"></i> LinkedIn
-    </a>
+                    <a href="https://www.linkedin.com/in/vaira-muthu-550806361" target="_blank" class="btn-secondary">
+                        <i class="fab fa-linkedin-in"></i> LinkedIn
+                    </a>
                     <a href="resume.pdf" target="_blank" class="btn-secondary" id="resumeBtn">
-        <i class="fas fa-file-pdf"></i> Resume
-    </a>
+                        <i class="fas fa-file-pdf"></i> Resume
+                    </a>
                 </div>
             </div>
             <div class="hero-avatar">
@@ -712,10 +711,10 @@
                             <span>Prototype</span>
                             <span>Balsamiq</span>
                             <span>Wireframing</span>
-                            <a href="https://www.figma.com/design/WEtdYqspnAl09kNli0eFSG/vairam?node-id=131-56&t=YhHU1UvR2a14jSDV-1" target="_blank" class="btn-primary" style="margin-top: 1rem; display: inline-block; padding: 0.5rem 1.5rem; font-size: 0.9rem;">
-            <i class="fas fa-eye"></i> View Project
-        </a>
                         </div>
+                        <a href="https://www.figma.com/design/WEtdYqspnAl09kNli0eFSG/vairam?node-id=131-56&t=YhHU1UvR2a14jSDV-1" target="_blank" class="btn-primary" style="margin-top: 1rem; display: inline-block; padding: 0.5rem 1.5rem; font-size: 0.9rem;">
+                            <i class="fas fa-eye"></i> View Project
+                        </a>
                     </div>
                 </div>
                 <!-- Project 2 -->
@@ -732,10 +731,10 @@
                             <span>UI Design</span>
                             <span>Prototype</span>
                             <span>Balsamiq</span>
-                             <a href="https://www.figma.com/design/WEtdYqspnAl09kNli0eFSG/vairam?node-id=392-352&t=YhHU1UvR2a14jSDV-1" target="_blank" class="btn-primary" style="margin-top: 1rem; display: inline-block; padding: 0.5rem 1.5rem; font-size: 0.9rem;">
-            <i class="fas fa-eye"></i> View Project
-        </a>
                         </div>
+                        <a href="https://www.figma.com/design/WEtdYqspnAl09kNli0eFSG/vairam?node-id=392-352&t=YhHU1UvR2a14jSDV-1" target="_blank" class="btn-primary" style="margin-top: 1rem; display: inline-block; padding: 0.5rem 1.5rem; font-size: 0.9rem;">
+                            <i class="fas fa-eye"></i> View Project
+                        </a>
                     </div>
                 </div>
                 <!-- Project 3 -->
@@ -755,10 +754,10 @@
                             <span>UI Design</span>
                             <span>Prototype</span>
                             <span>Balsamiq</span>
-                            <a href="https://www.figma.com/design/WEtdYqspnAl09kNli0eFSG/vairam?node-id=285-2&t=YhHU1UvR2a14jSDV-1" target="_blank" class="btn-primary" style="margin-top: 1rem; display: inline-block; padding: 0.5rem 1.5rem; font-size: 0.9rem;">
-            <i class="fas fa-eye"></i> View Project
-        </a>
                         </div>
+                        <a href="https://www.figma.com/design/WEtdYqspnAl09kNli0eFSG/vairam?node-id=285-2&t=YhHU1UvR2a14jSDV-1" target="_blank" class="btn-primary" style="margin-top: 1rem; display: inline-block; padding: 0.5rem 1.5rem; font-size: 0.9rem;">
+                            <i class="fas fa-eye"></i> View Project
+                        </a>
                     </div>
                 </div>
             </div>
@@ -778,11 +777,11 @@
                 </p>
             </div>
 
-<div class="exp-item">
+            <div class="exp-item">
                 <h3>Chatbot Developer</h3>
-                <div class="company">Ayya Nadar Janaki Ammal College,Sivakasi<span class="date">May-2025 – Aug-2026</span></div>
+                <div class="company">Ayya Nadar Janaki Ammal College, Sivakasi <span class="date">May-2025 – Aug-2026</span></div>
                 <p style="margin-top: 0.4rem; color: var(--text-light);">
-                   AI Chatbot Creation by using LLM,flask,Python.
+                   AI Chatbot Creation by using LLM, flask, Python.
                 </p>
             </div>
             
@@ -903,23 +902,8 @@
             this.reset();
         });
 
-       // ========================================
-// RESUME BUTTON - Force Download
-// ========================================
-document.getElementById('resumeBtn')?.addEventListener('click', function(e) {
-    e.preventDefault();
-    
-    // Create a hidden anchor element
-    const link = document.createElement('a');
-    link.href = 'resume.pdf';
-    link.download = 'Vairamuthu_K_Resume.pdf'; // Custom filename
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-});
-
         // ========================================
-        // 4. SMOOTH SCROLL FOR NAV
+        // 3. SMOOTH SCROLL FOR NAV
         // ========================================
         document.querySelectorAll('nav a[href^="#"]').forEach(link => {
             link.addEventListener('click', function(e) {
@@ -934,7 +918,7 @@ document.getElementById('resumeBtn')?.addEventListener('click', function(e) {
         });
 
         // ========================================
-        // 5. INTERSECTION OBSERVER — trigger counters when stats come into view
+        // 4. INTERSECTION OBSERVER — trigger counters when stats come into view
         // ========================================
         const statsSection = document.querySelector('.stats');
         if (statsSection) {
@@ -948,17 +932,15 @@ document.getElementById('resumeBtn')?.addEventListener('click', function(e) {
             }, { threshold: 0.3 });
             observer.observe(statsSection);
         } else {
-            // fallback: run anyway
             animateCounters();
         }
 
         // ========================================
-        // 6. TYPING EFFECT (optional micro-interaction)
+        // 5. TYPING EFFECT (optional micro-interaction)
         // ========================================
         function typeEffect() {
             const el = document.querySelector('.hero-content h1 .highlight');
             if (!el) return;
-            // just a tiny pulse on load — keeps it subtle
             el.style.transition = 'color 0.3s';
             setTimeout(() => {
                 el.style.color = '#6d28d9';
