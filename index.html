@@ -613,6 +613,8 @@
         .skill-card:nth-child(6) i { color: #81ECEC; }
         .skill-card:nth-child(7) i { color: #FAB1A0; }
         .skill-card:nth-child(8) i { color: #A29BFE; }
+        .skill-card:nth-child(9) i { color: #55EFC4; }
+        .skill-card:nth-child(10) i { color: #FDCB6E; }
 
         /* ========================================
            PROJECTS
@@ -664,6 +666,7 @@
         .project-card:nth-child(1) .project-thumb { background: linear-gradient(135deg, rgba(108, 92, 231, 0.3), rgba(162, 155, 254, 0.1)); }
         .project-card:nth-child(2) .project-thumb { background: linear-gradient(135deg, rgba(0, 206, 201, 0.3), rgba(129, 236, 236, 0.1)); }
         .project-card:nth-child(3) .project-thumb { background: linear-gradient(135deg, rgba(253, 121, 168, 0.3), rgba(253, 203, 110, 0.1)); }
+        .project-card:nth-child(4) .project-thumb { background: linear-gradient(135deg, rgba(108, 92, 231, 0.3), rgba(162, 155, 254, 0.1)); }
 
         .project-thumb i {
             position: relative;
@@ -733,6 +736,129 @@
         }
 
         .project-link:hover {
+            gap: 0.8rem;
+            color: var(--text-primary);
+        }
+
+        /* ========================================
+           COLLEGE PROJECTS (NEW)
+           ======================================== */
+        .college-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .college-card {
+            background: var(--bg-card);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border-color);
+            overflow: hidden;
+            transition: all var(--transition);
+            position: relative;
+        }
+
+        .college-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(108, 92, 231, 0.15);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .college-thumb {
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .college-thumb::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 50%;
+            background: linear-gradient(to top, rgba(10, 10, 10, 0.6), transparent);
+        }
+
+        .college-card:nth-child(1) .college-thumb { background: linear-gradient(135deg, rgba(0, 206, 201, 0.3), rgba(129, 236, 236, 0.1)); }
+        .college-card:nth-child(2) .college-thumb { background: linear-gradient(135deg, rgba(253, 121, 168, 0.3), rgba(253, 203, 110, 0.1)); }
+        .college-card:nth-child(3) .college-thumb { background: linear-gradient(135deg, rgba(108, 92, 231, 0.3), rgba(162, 155, 254, 0.1)); }
+
+        .college-thumb i {
+            position: relative;
+            z-index: 1;
+            transition: all var(--transition);
+        }
+
+        .college-card:hover .college-thumb i {
+            transform: scale(1.2) rotate(-5deg);
+        }
+
+        .college-info {
+            padding: 1.8rem;
+        }
+
+        .college-info h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 0.3rem;
+            transition: color var(--transition);
+        }
+
+        .college-card:hover .college-info h3 {
+            color: var(--color-primary-light);
+        }
+
+        .college-info p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .college-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .college-tags span {
+            background: rgba(255, 255, 255, 0.04);
+            padding: 0.2rem 0.8rem;
+            border-radius: 30px;
+            font-size: 0.7rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            border: 1px solid var(--border-color);
+            transition: all var(--transition);
+        }
+
+        .college-tags span:hover {
+            background: rgba(108, 92, 231, 0.1);
+            color: var(--color-primary-light);
+            border-color: rgba(108, 92, 231, 0.2);
+        }
+
+        .college-link {
+            color: var(--color-primary-light);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all var(--transition);
+        }
+
+        .college-link:hover {
             gap: 0.8rem;
             color: var(--text-primary);
         }
@@ -1121,6 +1247,7 @@
             
             .section-title { font-size: 1.8rem; }
             .projects-grid { grid-template-columns: 1fr; }
+            .college-grid { grid-template-columns: 1fr; }
             
             .exp-item { padding: 1.5rem 1.5rem 1.5rem 3rem; }
             .exp-item::before { left: 1rem; }
@@ -1148,10 +1275,15 @@
             .skill-card i { font-size: 1.8rem; }
             
             .projects-grid { grid-template-columns: 1fr; gap: 1.2rem; }
+            .college-grid { grid-template-columns: 1fr; gap: 1.2rem; }
             .project-thumb { height: 150px; font-size: 2.8rem; }
+            .college-thumb { height: 150px; font-size: 2.8rem; }
             .project-info { padding: 1.2rem; }
+            .college-info { padding: 1.2rem; }
             .project-info h3 { font-size: 1rem; }
+            .college-info h3 { font-size: 1rem; }
             .project-info p { font-size: 0.85rem; }
+            .college-info p { font-size: 0.85rem; }
             
             .exp-item { padding: 1.2rem 1rem 1.2rem 2.5rem; }
             .exp-item::before { width: 10px; height: 10px; left: 0.8rem; top: 1.2rem; }
@@ -1202,6 +1334,7 @@
             </div>
             <nav>
                 <a href="#work">Work</a>
+                <a href="#college">College</a>
                 <a href="#skills">Skills</a>
                 <a href="#experience">Experience</a>
                 <a href="#contact" class="nav-cta">Let's Talk</a>
@@ -1234,11 +1367,11 @@
             </div>
             <div class="hero-avatar">
                 <div class="avatar-wrapper">
-    <div class="avatar-box" style="padding: 0; overflow: hidden; background: var(--gradient-main);">
-        <img src="vairam.jpg" alt="Vairamuthu K" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;" />
-        <span class="status-dot"></span>
-    </div>
-</div>
+                    <div class="avatar-box" style="padding: 0; overflow: hidden; background: var(--gradient-main);">
+                        <img src="vairam.jpg" alt="Vairamuthu K" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;" />
+                        <span class="status-dot"></span>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -1363,6 +1496,78 @@
                         </a>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- ===== COLLEGE PROJECTS (NEW) ===== -->
+        <section id="college">
+            <div class="section-header reveal">
+                <div class="section-badge">🎓 Academic</div>
+                <h2 class="section-title">College Projects</h2>
+                <p class="section-subtitle">Innovative projects developed during my academic journey</p>
+            </div>
+            <div class="college-grid">
+                
+                <!-- College Project 1: Real-Time Air Pollution Detection -->
+                <div class="college-card reveal">
+                    <div class="college-thumb"><i class="fas fa-cloud-sun"></i></div>
+                    <div class="college-info">
+                        <h3>Real-Time Air Pollution Detection</h3>
+                        <p>Developed a real-time air quality monitoring system using Flask, LLM, and Python to detect and visualize pollution levels in urban areas with live data tracking.</p>
+                        <div class="college-tags">
+                            <span>Python</span>
+                            <span>Flask</span>
+                            <span>LLM</span>
+                            <span>IoT</span>
+                            <span>Data Visualization</span>
+                            <span>Real-Time</span>
+                        </div>
+                        <a href="#" target="_blank" class="college-link">
+                            View Project <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- College Project 2: AI Chatbot -->
+                <div class="college-card reveal">
+                    <div class="college-thumb"><i class="fas fa-robot"></i></div>
+                    <div class="college-info">
+                        <h3>AI Chatbot for Education</h3>
+                        <p>Developed an intelligent AI-powered chatbot using LLM, Flask, and Python to assist students with academic queries, provide personalized learning support, and automate responses.</p>
+                        <div class="college-tags">
+                            <span>Python</span>
+                            <span>Flask</span>
+                            <span>LLM</span>
+                            <span>NLP</span>
+                            <span>AI</span>
+                            <span>Machine Learning</span>
+                        </div>
+                        <a href="#" target="_blank" class="college-link">
+                            View Project <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- College Project 3: Real-Time Human Motion Detection -->
+                <div class="college-card reveal">
+                    <div class="college-thumb"><i class="fas fa-running"></i></div>
+                    <div class="college-info">
+                        <h3>Real-Time Human Motion Detection</h3>
+                        <p>Built a real-time human motion detection system using computer vision and deep learning to track and analyze human movements for security and health monitoring applications.</p>
+                        <div class="college-tags">
+                            <span>Python</span>
+                            <span>OpenCV</span>
+                            <span>Deep Learning</span>
+                            <span>Computer Vision</span>
+                            <span>TensorFlow</span>
+                            <span>Real-Time</span>
+                        </div>
+                        <a href="#" target="_blank" class="college-link">
+                            View Project <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
             </div>
         </section>
 
